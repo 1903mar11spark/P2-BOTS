@@ -17,7 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/landings/login/login.component';
 import { AdminHomeComponent } from './components/landings/admin-home/admin-home.component';
-import { InfoComponent } from './components/sections/info/info.component';
+import { InfoComponent } from './components/landings/info/info.component';
 import { NavComponent } from './components/layout/nav/nav.component';
 import { CreateUserComponent } from './components/landings/create-user/create-user.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
