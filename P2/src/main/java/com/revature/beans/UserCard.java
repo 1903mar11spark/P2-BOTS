@@ -31,7 +31,12 @@ public class UserCard {
 		this.card = card;
 		this.cardState = cardState;
 	}
-
+	public UserCard(User user, Card card, CardState cardState) {
+		super();
+		this.user = user;
+		this.card = card;
+		this.cardState = cardState;
+	}
 	//instance variables
 	
 	@Id //indicates primary key 

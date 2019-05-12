@@ -9,7 +9,18 @@
 <body>
 	<div class="display">
 		<!-- insert values from the Model into the DOM for server-side rendering -->
-		<p>Welcome, ${username}</p>
+		<p>Welcome, ${firstname}!</p>
+		<span><b>User profile</b></span><br>
+		<span>First name: ${firstname}</span><br>
+		<span>Last name: ${lastname}</span><br>
+		<span>User name: ${username}</span><br>
+		<span>User type: ${userType}</span><br>
+		<span>Email: ${email}</span><br>
+		<br>
+		<br>
+		<form action="logout" method="get" id="logOutForm">
+			<input type="submit" value="logout" />
+		</form>
 	</div>
 </body>
 </html>
