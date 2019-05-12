@@ -24,6 +24,11 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
+@NamedQueries({
+	
+	@NamedQuery(name = "getUserbyLoginCredsId", query = "from User where loginCreds.id = :loginCredsVar"), 
+	@NamedQuery(name = "getAllAdminIds", query ="select id from User where userType.id = 2")
+})
 
 @Entity // indicates that the class represents a DB entity
 @Table(name ="USR")

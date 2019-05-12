@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+
+
 @Entity
 @Table(name="CARDSTATE")
 public class CardState {
