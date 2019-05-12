@@ -7,9 +7,18 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+
+@NamedQueries({
+	
+	@NamedQuery(
+				name = "getLoginCredsIdbyUnameAndPword", 
+				query = "select id from LoginCreds where uName = :uNameVar and pWord = :pWordVar")
+})
 
 @Entity
 @Table(name="LOGINCREDS")

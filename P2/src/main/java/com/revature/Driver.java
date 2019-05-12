@@ -332,6 +332,30 @@ public class Driver {
 		s2.close();
 		*/
 		
+		/*
+		User marry = ud.getUserById(92); 
+		
+		Card card16 = cd.getCardById(16);
+		
+		CardState learning = csd.getCardStateById(1); 
+		 
+		
+		SessionFactory sf2 = ConnectionUtil.getSessionFactory();
+		Session s2 = sf.openSession();
+		Transaction tx2 = s2.beginTransaction();
+		
+		UserCard marryCard16 = new UserCard();
+		marryCard16.setCard(card16);
+		marryCard16.setUser(marry);
+		marryCard16.setCardState(learning);
+		
+		s2.save(marryCard16);
+		
+		System.out.println(s2.getStatistics());
+		tx2.commit();
+		s2.close();
+		*/
+		
 		ResultDAO rd = new ResultDAOImpl(); 
 		AttemptDAO ad = new AttemptDAOImpl(); 
 		/*
@@ -354,7 +378,59 @@ public class Driver {
 		ad.addAttempt(JohnsAttempt);
 		*/
 		
+		//testing named queries 
+		
+		SessionFactory sf2 = ConnectionUtil.getSessionFactory();
+		Session s2 = sf2.openSession();
+		/*
+		//query 1
+		Query q = s2.getNamedQuery("getUserbyLoginCredsId"); 
+		q.setParameter("loginCredsVar", 1); 
+		
+		List<User> userList = q.getResultList(); 
+		
+		for (User user : userList) {
+			System.out.println(user);
+		}
+		
+		//query 2
+		Query q2 = s2.getNamedQuery("getLoginCredsIdbyUnameAndPword"); 
+		q2.setParameter("uNameVar", "FFlower"); 
+		q2.setParameter("pWordVar", "fanciful"); 
+		
+		List<Integer> loginCredsIdList = q2.getResultList(); 
+		
+		for (Integer id : loginCredsIdList) {
+			System.out.println(id);
+		}
+		 
+		
+		//System.out.println(s.getStatistics());
+		s.close();
+		*/
+		/*
+		User user = ud.getUserbyUnameAndPword("FFlower", "fanciful"); 
+		System.out.println(user);
+		*/
+		
+		//query 2
+		/*
+		Query q3 = s2.getNamedQuery("getAllManagerIds"); 
+			
+		List<Integer> managerIdList = q3.getResultList(); 
+				
+		for (Integer id : managerIdList) {
+			System.out.println(id);
+		}	 
+				
+		//System.out.println(s.getStatistics());
+		s.close();
+		*/
+		UserService us = new UserServiceImpl(); 
 		
 		
+		User user = us.getUserByUnameAndPWord("FFlower", "fanciful");
+		
+		System.out.println(user);
 	}
 }

@@ -29,6 +29,11 @@ public class UserServiceImpl implements UserService {
 		return ud.getUserById(id); 
 	}
 	
+	@Override
+	public User getUserByUnameAndPWord(String uName, String pWord) {
+		return ud.getUserbyUnameAndPword(uName, pWord); 
+	}
+	
 	public List<User> getAllUsers() {
 		return ud.getAllUsers(); 
 	}
@@ -76,6 +81,11 @@ public class UserServiceImpl implements UserService {
 	
 	public void deleteUser(User user) {
 		ud.deleteUser(user);
+	}
+
+	@Override
+	public List<Integer> getAllAdminIds() {
+		return ud.getAllAdminIds(); 
 	}
 	
 }
