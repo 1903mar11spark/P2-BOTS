@@ -12,7 +12,6 @@ import { HttpClient } from '@angular/common/http';
 
 export class UserService {
 
-  
 
   endpoint = 'http://localhost:8084/P2/user';
 
@@ -29,6 +28,11 @@ export class UserService {
   public addUser(user: User): Observable<User>{
     return this.httpClient.post<User>(this.endpoint, user)
   }
+
+  public updateUser(user: User): Observable<User>{
+    return this.httpClient.put<User>(this.endpoint, user)
+  }
+
 }
 
 
