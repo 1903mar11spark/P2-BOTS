@@ -27,7 +27,7 @@ export class UserService {
   }
 
   public addUser(user: User): Observable<User>{
-    return this.httpClient.post<User>(this.endpoint+'/', user)
+    return this.httpClient.post<User>(this.endpoint, user)
   }
 }
 
