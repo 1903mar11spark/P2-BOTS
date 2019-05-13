@@ -20,6 +20,4 @@ export class CardService {
   public updateUser(card: Card): Observable<Card>{
     return this.httpClient.put<Card>(this.endpoint, card)
   }
-
-
 }
