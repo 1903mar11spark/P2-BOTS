@@ -14,7 +14,7 @@
 		<span>First name: ${firstname}</span><br>
 		<span>Last name: ${lastname}</span><br>
 		<span>User name: ${username}</span><br>
-		<span>User type: ${userType}</span><br>
+		<span>User type: ${usertype}</span><br>
 		<span>Email: ${email}</span><br>
 		<br>
 		<br>

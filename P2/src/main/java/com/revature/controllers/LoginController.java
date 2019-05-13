@@ -117,9 +117,13 @@ public class LoginController {
 	@GetMapping(value = "/sessionUser")
 	ResponseEntity<UserLogging> returnUserLogging(HttpSession session) {
 		
-		UserLogging userLogging = new UserLogging(Integer.parseInt(session.getAttribute("userId").toString()), session.getAttribute("username").toString(), session.getAttribute("firstname").toString(), session.getAttribute("lastname").toString(), session.getAttribute("lastname").toString(), session.getAttribute("usertype").toString()); 
+		System.out.println("in method");
 		
-	    return new ResponseEntity<>(userLogging, HttpStatus.OK);
+		UserLogging userLogging = new UserLogging(Integer.parseInt(session.getAttribute("userId").toString()), session.getAttribute("username").toString(), session.getAttribute("firstname").toString(), session.getAttribute("lastname").toString(), session.getAttribute("email").toString(), session.getAttribute("usertype").toString()); 
+		
+		System.out.println(userLogging);
+	 
+		return new ResponseEntity<>(userLogging, HttpStatus.OK);
 	    
 	}
 	/*
