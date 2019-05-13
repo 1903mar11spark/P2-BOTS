@@ -2,8 +2,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; //BootStrap import 
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
 
 //may add Material and Graphics 
 //as comments aren't permitted in json, to add Bootstrap you also have to go to the angular.json file and add
@@ -17,7 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/landings/login/login.component';
 import { AdminHomeComponent } from './components/landings/admin-home/admin-home.component';
-import { InfoComponent } from './components/sections/info/info.component';
+import { InfoComponent } from './components/landings/info/info.component';
 import { NavComponent } from './components/layout/nav/nav.component';
 import { CreateUserComponent } from './components/landings/create-user/create-user.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
@@ -30,6 +31,7 @@ import { UpdateInfoComponent } from './components/sections/update-info/update-in
 
 
 //services 
+
 
 @NgModule({
   declarations: [
@@ -52,8 +54,9 @@ import { UpdateInfoComponent } from './components/sections/update-info/update-in
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
+
   ],
   providers: [],
   //lets ang know root component

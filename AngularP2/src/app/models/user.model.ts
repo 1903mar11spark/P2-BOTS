@@ -19,6 +19,19 @@ export class User {
         this.loginCreds = loginCreds; 
         this.mentoredBy = mentoredBy;
     }
+    
+}
+
+export class createUser {
+    fName: string;
+    lName: string;
+    email: string;
+
+    constructor(fName: string, lName: string, email: string){
+        this.fName = fName;
+        this.lName = lName;
+        this.email = email;
+    }
 }
 
 
