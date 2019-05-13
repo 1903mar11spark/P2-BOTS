@@ -14,7 +14,14 @@ public class UserLogging {
 	// constructors
 	public UserLogging() {
 	}
-
+	public UserLogging(int id, String username, String firstname, String lastname, String email) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.email = email;
+	}
 	public UserLogging(int id, String username, String firstname, String lastname, String email, String usertype) {
 		super();
 		this.id = id;
@@ -22,18 +29,9 @@ public class UserLogging {
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.email = email;
-		this.usertype = usertype; 
-		
+		this.usertype = usertype; 	
 	}
-	public UserLogging(int id, String username, String firstname, String lastname, String email) {
-		super();
-		this.id = id;
-		this.username = username;
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.usertype = usertype; 
-		
-	}
+
 
 	// getters and setters
 	public int getId() {
