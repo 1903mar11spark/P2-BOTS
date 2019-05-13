@@ -8,7 +8,13 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginComponent implements OnInit {
   
- 
+  endpoint = 'http://localhost:8084/P2/login';
+
+  login: Object = {};
+
+   onSubmit(){
+     console.log("submitted")
+   }
 
   constructor() { }
 

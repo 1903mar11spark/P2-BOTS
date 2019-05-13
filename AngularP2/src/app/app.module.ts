@@ -5,6 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; //BootStrap import
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+
 //may add Material and Graphics 
 //as comments aren't permitted in json, to add Bootstrap you also have to go to the angular.json file and add
 // "node_modules/bootstrap/dist/css/bootstrap.min.css" this to the styles section among assets
@@ -31,6 +32,7 @@ import { UpdateInfoComponent } from './components/sections/update-info/update-in
 
 //services 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +55,8 @@ import { UpdateInfoComponent } from './components/sections/update-info/update-in
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [],
   //lets ang know root component
