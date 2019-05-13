@@ -18,8 +18,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.beans.Card;
+import com.revature.beans.Topic;
 import com.revature.beans.User;
 import com.revature.service.CardService;
+import com.revature.service.TopicService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4203")
@@ -28,16 +30,27 @@ public class CardController {
 
 	// instance variables
 	private CardService cs;
+	private TopicService ts; 
 
-	@Autowired // setter injection
+	// injection of services 
+	@Autowired // setter injection 
 	public void setCardService(CardService cs) {
 		this.cs = cs;
+	}
+	@Autowired // setter injection 
+	public void setTopicService (TopicService ts) {
+		this.ts = ts;
 	}
 
 	// methods
 	@RequestMapping(value = "/all", method = RequestMethod.GET)
 	public ResponseEntity<List<Card>> getAllUsers() {
 		return new ResponseEntity<>(cs.getAllCards(), HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/topic/all", method = RequestMethod.GET)
+	public ResponseEntity<List<Topic>> getAllTopics() {
+		return new ResponseEntity<>(ts.getAllTopics(), HttpStatus.OK);
 	}
 
 	@GetMapping(value = "/{id}")
