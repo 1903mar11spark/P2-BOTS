@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Flashcard } from 'src/app/models/Flashcard';
-import { FlashcardService} from '../../../services/flashcard.service';
+import { FlashcardService} from 'src/app/services/flashcard.service';
+
 @Component({
   selector: 'app-flip-card',
   templateUrl: './flip-card.component.html',
@@ -10,6 +11,8 @@ export class FlipCardComponent implements OnInit {
 flashcards: Flashcard[];
 flashcard: Flashcard;
 num: number;
+
+
   constructor(private flashcardService:FlashcardService) { }
 temporary:Flashcard[];
   loadFlashCards(): void{

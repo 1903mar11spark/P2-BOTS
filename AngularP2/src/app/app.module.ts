@@ -31,6 +31,8 @@ import { PlayComponent } from './components/landings/play/play.component';
 import { UpdateModalComponent } from './components/sections/modals/update-modal/update-modal.component';
 import { CreateCardComponent } from './components/sections/create-card/create-card.component';
 import { CardModalComponent } from './components/sections/modals/card-modal/card-modal.component';
+import { FlipCardComponent } from './components/sections/flip-card/flip-card.component';
+
 
 
 
@@ -54,7 +56,8 @@ import { CardModalComponent } from './components/sections/modals/card-modal/card
     PlayComponent,
     UpdateModalComponent,
     CreateCardComponent,
-    CardModalComponent
+    CardModalComponent,
+    FlipCardComponent
     
   ],
   imports: [

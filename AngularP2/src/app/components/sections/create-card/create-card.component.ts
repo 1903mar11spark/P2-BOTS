@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { CardService } from 'src/app/services/card.service';
+import { FlashcardService } from 'src/app/services/flashcard.service';
 
 @Component({
   selector: 'app-create-card',
@@ -16,10 +16,10 @@ export class CreateCardComponent implements OnInit {
    }); 
 
    onSubmit(): void {
-     this.cardService.addCard(this.newCardForm.get('question').value);
+     this.flashcardService.addCard(this.newCardForm.get('question').value);
    }
 
-  constructor(private cardService: CardService) { }
+  constructor(private flashcardService:FlashcardService) { }
 
   ngOnInit() {
   }
