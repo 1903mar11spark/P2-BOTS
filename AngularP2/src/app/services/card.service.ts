@@ -17,8 +17,8 @@ export class CardService {
     return this.httpClient.post<Card>(this.endpoint, card)
   }
 
-  public updateUser(user: ): Observable<User>{
-    return this.httpClient.put<User>(this.endpoint, user)
+  public updateUser(card: Card): Observable<Card>{
+    return this.httpClient.put<Card>(this.endpoint, card)
   }
 
 
