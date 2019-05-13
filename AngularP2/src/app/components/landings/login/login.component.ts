@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
+import { FormGroup, FormControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -8,17 +10,28 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginComponent implements OnInit {
   
-  endpoint = 'http://localhost:8084/P2/login';
-
-  login: Object = {};
-
-   onSubmit(){
-     console.log("submitted")
-   }
-
-  constructor() { }
-
-  ngOnInit() {
+  //instance variables
+  loginForm: FormGroup;
+  login: Object = {}; //this does?
+ 
+  //constructor
+  constructor(private loginService: LoginService) {
+    this.loginForm = new FormGroup({
+      username: new FormControl(),
+      password: new FormControl()
+    });
   }
-
+ 
+  //methods
+  onSubmit() {
+    console.log("submitted")
+    console.log(this.loginForm.value.username);
+    console.log(this.loginForm.value.password);
+    //this.loginService[make post happen]
+  }
+ 
+  ngOnInit() {
+ 
+  }
 }
+
