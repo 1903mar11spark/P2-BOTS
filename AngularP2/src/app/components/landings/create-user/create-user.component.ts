@@ -20,8 +20,10 @@ export class CreateUserComponent implements OnInit {
    cUser: createUser;
 
    onFormSubmit(): void {
+      
      this.userService.addUser(this.createForm.get('firstName').value)
       
+
     console.log('firstName: ' + this.createForm.get('firstName').value + 'lastName: ' + this.createForm.get('lastName').value + 'email: ' + this.createForm.get('email').value);
 } 
   constructor(private userService: UserService) { }
