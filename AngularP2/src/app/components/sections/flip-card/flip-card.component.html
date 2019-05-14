@@ -23,20 +23,22 @@
   </select>
 </div>
 <br>
+<br>
+    <br>
 <h5>Hover over the flashcard to see the Answer!</h5>
-    <br>
-    <br>
+    
 <br>
 
 
 <div *ngFor="let flashcard of this.flashcards">
-  <div *ngIf="(flashcard.topic.topicName== flashCatagory)">
-    
+  <div *ngIf="(flashcard.topic.topicName== flashCatagory) && Mastered">
+    <div>
 <div class="flip-card ">
   <div class="flip-card-inner">
     <div class="flip-card-front">
         <!-- <div *ngFor="let flashcard of this.flashcards"> -->
            <h2> {{flashcard.question}} </h2>
+
           <!-- </div> -->
         
     </div>
@@ -50,8 +52,8 @@
     
   </div>
 </div>
-<p>Checkbox here</p>
 <br> <br>
+</div>
 </div>
 </div>
 <!-- <button (click)="loadFlashCards()">Get Flashcards</button>

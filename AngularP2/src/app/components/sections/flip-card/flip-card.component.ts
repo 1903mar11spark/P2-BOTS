@@ -42,7 +42,11 @@ topic: Topic;
     
   }
   flashCatagory='';
+  Mastered:boolean=true;
   
+  questionMastered():void{
+    this.Mastered=!this.Mastered;
+  }
 
   
   
