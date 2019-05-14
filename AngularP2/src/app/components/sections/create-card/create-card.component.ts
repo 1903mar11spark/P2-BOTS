@@ -16,7 +16,7 @@ export class CreateCardComponent implements OnInit {
    }); 
 
    onSubmit(): void {
-     this.flashcardService.addCard(this.newCardForm.get('question').value);
+     this.flashcardService.addCard(this.newCardForm.value);
    }
 
   constructor(private flashcardService:FlashcardService) { }
