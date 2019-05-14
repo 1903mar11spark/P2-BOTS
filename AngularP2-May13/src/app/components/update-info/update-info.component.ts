@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-update-info',
@@ -7,7 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateInfoComponent implements OnInit {
 
-  constructor() { }
+  updateForm = new FormGroup({
+    firstName: new FormControl(),
+    lastName: new FormControl(),
+    email: new FormControl()
+   }); 
+
+   onSubmit(): void {
+     this.userService.updateUser(this.updateForm.value);
+     console.log(this.updateForm.value)
+   }
+
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
   }

@@ -22,7 +22,7 @@ export class User {
     
 }
 
-/*
+
 export class createUser {
     fName: string;
     lName: string;
@@ -35,4 +35,3 @@ export class createUser {
     }
 }
 
-*/

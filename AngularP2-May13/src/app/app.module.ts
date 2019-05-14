@@ -25,9 +25,15 @@ import { AppRoutingModule } from './app-routing.module';
 
 //Good old components
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
+
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { InfoComponent } from './components/info/info.component';
+import { CardModalComponent } from 'modals/card-modal/card-modal.component';
+import { CreateCardComponent } from './components/create-card/create-card.component';
+import { CreateUserComponent } from './components/create-user/create-user.component';
+import { FlipCardComponent } from './components/flip-card/flip-card.component';
+import { PlayComponent } from './components/play/play.component';
+import { UpdateModalComponent } from './components/update-modal/update-modal.component';
 //services 
 
 //
@@ -35,7 +41,6 @@ import { InfoComponent } from './components/info/info.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     AdminHomeComponent,
     InfoComponent,
     NavComponent,
@@ -48,6 +53,12 @@ import { InfoComponent } from './components/info/info.component';
     UpdateInfoComponent,
     UserLoggingComponent,
     BaseComponent,
+    CardModalComponent,
+    CreateUserComponent,
+    CreateCardComponent,
+    FlipCardComponent,
+    PlayComponent,
+    UpdateModalComponent,
     
   ],
   imports: [

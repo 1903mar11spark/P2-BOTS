@@ -4,11 +4,11 @@
     }
     
     .card{
-    height: 340px;
+    height: 390px;
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color: silver !important;
+    background-color: gainsboro !important;
     }
     
     .card-header h3{
@@ -17,7 +17,7 @@
     
     .input-group-prepend span{
     width: 30px;
-    background-color: orange;
+    background-color: #0275d8;
     color: black;
     border:0 !important;
     }
@@ -28,21 +28,9 @@
     
     }
     
-    /* .remember{
-    color: white;
-    }
-    
-    .remember input
-    {
-    width: 20px;
-    height: 20px;
-    margin-left: 15px;
-    margin-right: 5px;
-    } */
-    
     .login_btn{
     color: black;
-    background-color: orange;
+    background-color: #0275d8;
     width: 100px;
     }
     
