@@ -10,9 +10,9 @@ import { FlashcardService } from 'src/app/services/flashcard.service';
 export class CreateCardComponent implements OnInit {
 
   newCardForm = new FormGroup({
-    firstName: new FormControl(),
-    lastName: new FormControl(),
-    email: new FormControl()
+    question: new FormControl(),
+    answer: new FormControl(),
+    topic: new FormControl()
    }); 
 
    onSubmit(): void {
