@@ -10,8 +10,8 @@
   <option value="">  </option>
           <!-- <div *ngIf=" flashcard.topic.topicName == 'Geography'"> -->
 
-    <option *ngFor="let flashcard of this.flashcards" value="{{flashcard.topic.topicName}}">
-      {{flashcard.topic.topicName}}
+    <option *ngFor="let topic of this.topics" value="{{topic.topicName}}">
+      {{topic.topicName}}
 
     </option>
         <!-- </div> -->
@@ -50,6 +50,7 @@
     
   </div>
 </div>
+<p>Checkbox here</p>
 <br> <br>
 </div>
 </div>

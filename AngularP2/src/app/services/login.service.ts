@@ -8,13 +8,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type':  'application/json',
-    'Authorization': 'my-auth-token'
-  })
-};
-
 export class LoginService {
 
 
@@ -29,3 +22,12 @@ export class LoginService {
 
 
 }
+
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    'Authorization': 'my-auth-token'
+  })
+};
+
