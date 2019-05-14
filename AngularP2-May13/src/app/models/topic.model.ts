@@ -1,9 +1,13 @@
-export class Topic {
-    id: number;
-    topic: string;
 
-    constructor(id: number, topic: string) {
+export class Topic {
+
+    //instance variables 
+    id: number; 
+    topicName: string; 
+
+    //constructor 
+    constructor(id: number, topicName: string) {
         this.id = id;
-        this.topic = topic;
+        this.topicName = topicName;
     }
-}
+
