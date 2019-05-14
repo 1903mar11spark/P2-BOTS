@@ -17,14 +17,10 @@ export class CreateUserComponent implements OnInit {
     email: new FormControl()
    }); 
 
-   cUser: createUser;
-
+   
    onFormSubmit(): void {
-      
-     this.userService.addUser(this.createForm.get('firstName').value)
-      
-
-    console.log('firstName: ' + this.createForm.get('firstName').value + 'lastName: ' + this.createForm.get('lastName').value + 'email: ' + this.createForm.get('email').value);
+     this.userService.addUser(this.createForm.value);
+    console.log(this.createForm.value);
 } 
   constructor(private userService: UserService) { }
 
@@ -33,7 +29,5 @@ export class CreateUserComponent implements OnInit {
   ngOnInit() {
   }
   
-  onSubmit(){
-  console.warn(this.createForm.value);
-  }
+
 }

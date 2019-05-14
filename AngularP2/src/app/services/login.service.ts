@@ -2,8 +2,12 @@ import { LoginCreds } from 'src/app/models/login-creds.model';
 
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
+
+@Injectable({
+  providedIn: 'root'
+})
 
 export class LoginService {
 
@@ -15,17 +19,9 @@ export class LoginService {
 
 
   public login(uName: string, pWord: string): Observable<LoginCreds> {
-    return this.http.post<LoginCreds>(this.endpoint, LoginCreds, httpOptions);
+    return this.http.post<LoginCreds>(this.endpoint, LoginCreds);
   }
 
 
 }
-
-
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type':  'application/json',
-    'Authorization': 'my-auth-token'
-  })
-};
 
