@@ -24,7 +24,7 @@ import com.revature.service.CardService;
 import com.revature.service.TopicService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4203")
+@CrossOrigin(origins = "http://localhost:4210")
 @RequestMapping(value = "/card")
 public class CardController {
 
@@ -63,6 +63,18 @@ public class CardController {
 			return new ResponseEntity<>(c, HttpStatus.OK);
 		}
 	}
+	
+//	@PostMapping
+//	public ResponseEntity<String> addTopic(@RequestBody Topic topic) {
+//		ResponseEntity<String> resp = null;
+//		try {
+//			ts.addTopic(topic);
+//			resp = new ResponseEntity<>("CARD CREATED SUCCESSFULLY", HttpStatus.OK);
+//		} catch (Exception e) {
+//			resp = new ResponseEntity<>("FAILED TO CREATE CARD", HttpStatus.BAD_REQUEST);
+//		}
+//		return resp;
+//	}
 
 	// rewrite the above to use a query string
 	// (will also work for form data passed in request body)
@@ -100,6 +112,7 @@ public class CardController {
 		}
 		return resp;
 	}
+	
 	
 	@DeleteMapping
 	public ResponseEntity<String> deleteCard(@RequestBody Card card){
