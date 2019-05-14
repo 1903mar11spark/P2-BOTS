@@ -7,6 +7,8 @@ import { CreateUserComponent } from './components/landings/create-user/create-us
 import { LoginComponent } from './components/landings/login/login.component';
 import { AdminHomeComponent } from './components/landings/admin-home/admin-home.component';
 import { UserHomeComponent } from './components/landings/user-home/user-home.component';
+import { InfoComponent } from './components/landings/info/info.component';
+import { PlayComponent } from './components/landings/play/play.component';
 
 
 
@@ -18,7 +20,8 @@ const routes: Routes = [
   { path: 'signUp', component: CreateUserComponent},
   { path: 'adminHome', component: AdminHomeComponent},
   { path: 'userHome', component: UserHomeComponent},
-  { path: 'info', component: UserHomeComponent},
+  { path: 'info', component: InfoComponent},
+  { path: 'play', component: PlayComponent},
   { path: '**', redirectTo: '/login' }
 ];
 

@@ -1,4 +1,3 @@
-//
 
 export class Topic {
 
@@ -12,4 +11,3 @@ export class Topic {
         this.topicName = topicName;
     }
 
-}
