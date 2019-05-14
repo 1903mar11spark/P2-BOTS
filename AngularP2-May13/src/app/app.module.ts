@@ -34,6 +34,8 @@ import { CreateUserComponent } from './components/create-user/create-user.compon
 import { FlipCardComponent } from './components/flip-card/flip-card.component';
 import { PlayComponent } from './components/play/play.component';
 import { UpdateModalComponent } from './components/update-modal/update-modal.component';
+import { AdminStatsComponent } from './components/admin-stats/admin-stats.component';
+import { ChartComponent } from './components/chart/chart.component';
 //services 
 
 //
@@ -59,6 +61,8 @@ import { UpdateModalComponent } from './components/update-modal/update-modal.com
     FlipCardComponent,
     PlayComponent,
     UpdateModalComponent,
+    AdminStatsComponent,
+    ChartComponent,
     
   ],
   imports: [
