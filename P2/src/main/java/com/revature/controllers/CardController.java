@@ -48,6 +48,7 @@ public class CardController {
 		return new ResponseEntity<>(cs.getAllCards(), HttpStatus.OK);
 	}
 	
+	// GET endpoint for card topics 
 	@RequestMapping(value = "/topic/all", method = RequestMethod.GET)
 	public ResponseEntity<List<Topic>> getAllTopics() {
 		return new ResponseEntity<>(ts.getAllTopics(), HttpStatus.OK);
