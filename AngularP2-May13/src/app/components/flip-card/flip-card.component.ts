@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Flashcard } from 'src/app/models/Flashcard';
 import { FlashcardService} from 'src/app/services/flashcard.service';
-import { Topic } from 'src/app/models/topic';
+import { Topic } from 'src/app/models/topic.model';
 
 @Component({
   selector: 'app-flip-card',
