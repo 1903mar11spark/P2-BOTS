@@ -58,16 +58,16 @@ export class UserLoggingComponent implements OnInit {
   // value which may not have back from the Observable yet.
   }
 
-  //logging out 
+  // logging out 
   userLogout() {
     this.LogoutService.userLogout().subscribe(
       (userLogging: UserLogging) => { this.userLogging = userLogging; console.log(this.userLogging); },
       error => { console.log(error); }
     );
 
-  console.log(`User ${this.userLogging.firstname} is now logged out`);
+  // console.log(`User ${this.userLogging.firstname} is now logged out`);
 
-  console.log(this.userLogging);
+  // console.log(this.userLogging);
 
 
   this.router.navigate(['/base']);
