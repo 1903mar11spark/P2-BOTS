@@ -16,7 +16,6 @@ export class CreateUserComponent implements OnInit {
   
   //instance variables because we have to lay this out 
   createForm: FormGroup;
-  cUser: Object = {}; //still ??
   user: User; 
   uType: UserType;
  

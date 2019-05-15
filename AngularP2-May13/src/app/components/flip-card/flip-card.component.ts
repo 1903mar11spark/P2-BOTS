@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Flashcard } from 'src/app/models/Flashcard';
+
 import { FlashcardService} from 'src/app/services/flashcard.service';
 import { Topic } from 'src/app/models/topic.model';
+import { Card } from 'src/app/models/card.model';
 
 
 @Component({
@@ -10,8 +11,8 @@ import { Topic } from 'src/app/models/topic.model';
   styleUrls: ['./flip-card.component.css']
 })
 export class FlipCardComponent implements OnInit {
-flashcards: Flashcard[];
-flashcard: Flashcard;
+flashcards: Card[];
+flashcard: Card;
 topics: Topic[];
 topic: Topic;
 
@@ -46,7 +47,7 @@ topic: Topic;
    questionsmastered=0;
   Mastered:boolean=true;
   
-  questionMastered(flashcard:Flashcard):void{
+  questionMastered(flashcard:Card):void{
 this.flashcards = this.flashcards.filter(f => f.id!== flashcard.id)
 this.questionsmastered++;
 console.log(this.questionsmastered);
