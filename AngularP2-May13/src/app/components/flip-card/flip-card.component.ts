@@ -15,63 +15,63 @@ flashcard: Card;
 topics: Topic[];
 topic: Topic;
 
-
-  constructor(private flashcardService:FlashcardService) { }
-
-  loadFlashCards(): void{
-    this.flashcardService.getFlashcards()
-    .subscribe(
-    (flashcardList: any) => { this.flashcards = flashcardList;
-       console.log(this.flashcards);
-
+  
+    constructor(private flashcardService:FlashcardService) { }
+  
+    loadFlashCards(): void{
+      this.flashcardService.getFlashcards()
+      .subscribe(
+      (flashcardList: any) => { this.flashcards = flashcardList;
+         console.log(this.flashcards);
+  
+        },
+      error => { console.log(error); }
+      )
+  
+    
+  
+    }
+    loadTopics(): void{
+      this.flashcardService.getTopics()
+      .subscribe(
+        (topicList: any) => {this.topics = topicList;
+        console.log(this.topics);
+  
       },
-    error => { console.log(error); }
-    )
-
-  
-
-  }
-  loadTopics(): void{
-    this.flashcardService.getTopics()
-    .subscribe(
-      (topicList: any) => {this.topics = topicList;
-      console.log(this.topics);
-
-    },
-    error => { console.log(error); }
-    )
+      error => { console.log(error); }
+      )
+      
+    }
+     flashCatagory='';
+     questionsmastered=0;
+    Mastered:boolean=true;
     
-  }
-  flashCatagory='';
+    questionMastered(flashcard:Card):void{
+  this.flashcards = this.flashcards.filter(f => f.id!== flashcard.id)
+  this.questionsmastered++;
+  console.log(this.questionsmastered);
+  //you have mastered "questionmastered" {{flashcard.topic.topicName}} questiong
+    }
   
-
-  questionMastered(flashcard:Card):void{
-this.flashcards = this.flashcards.filter(f => f.id!== flashcard.id)
-this.questionsmastered++;
-console.log(this.questionsmastered);
-//you have mastered "questionmastered" {{flashcard.topic.topicName}} questiong
-  }
-
-
-  
-  
-
-
-  filterFlashCards(filter: string): void{
-
-
-    this.flashCatagory= filter;
-   
     
     
-  }
   
-  ngOnInit() {
-    this.loadFlashCards();
-    this.loadTopics();
-
-
+  
+    filterFlashCards(filter: string): void{
+  
+  
+      this.flashCatagory= filter;
+     
+      
+      
+    }
     
+    ngOnInit() {
+      this.loadFlashCards();
+      this.loadTopics();
+  
+  
+      
+    }
+  
   }
-
-}
