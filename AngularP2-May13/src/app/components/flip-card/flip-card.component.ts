@@ -3,7 +3,6 @@ import { Flashcard } from 'src/app/models/Flashcard';
 import { FlashcardService} from 'src/app/services/flashcard.service';
 import { Topic } from 'src/app/models/topic.model';
 
-
 @Component({
   selector: 'app-flip-card',
   templateUrl: './flip-card.component.html',
@@ -42,16 +41,8 @@ topic: Topic;
     )
     
   }
-   flashCatagory='';
-   questionsmastered=0;
-  Mastered:boolean=true;
+  flashCatagory='';
   
-  questionMastered(flashcard:Flashcard):void{
-this.flashcards = this.flashcards.filter(f => f.id!== flashcard.id)
-this.questionsmastered++;
-console.log(this.questionsmastered);
-//you have mastered "questionmastered" {{flashcard.topic.topicName}} questiong
-  }
 
   
   
