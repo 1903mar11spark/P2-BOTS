@@ -41,11 +41,15 @@ topic: Topic;
     )
     
   }
-  flashCatagory='';
+   flashCatagory='';
+   questionsmastered=0;
   Mastered:boolean=true;
   
-  questionMastered():void{
-    this.Mastered=!this.Mastered;
+  questionMastered(flashcard:Flashcard):void{
+this.flashcards = this.flashcards.filter(f => f.id!== flashcard.id)
+this.questionsmastered++;
+console.log(this.questionsmastered);
+//you have mastered "questionmastered" {{flashcard.topic.topicName}} questiong
   }
 
   
