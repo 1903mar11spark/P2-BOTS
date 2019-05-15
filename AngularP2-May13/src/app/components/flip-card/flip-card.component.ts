@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Flashcard } from 'src/app/models/Flashcard';
+
 import { FlashcardService} from 'src/app/services/flashcard.service';
 import { Topic } from 'src/app/models/topic.model';
-
+import { Card } from 'src/app/models/card.model';
 
 @Component({
   selector: 'app-flip-card',
@@ -10,8 +10,8 @@ import { Topic } from 'src/app/models/topic.model';
   styleUrls: ['./flip-card.component.css']
 })
 export class FlipCardComponent implements OnInit {
-flashcards: Flashcard[];
-flashcard: Flashcard;
+flashcards: Card[];
+flashcard: Card;
 topics: Topic[];
 topic: Topic;
 
@@ -42,16 +42,16 @@ topic: Topic;
     )
     
   }
-   flashCatagory='';
-   questionsmastered=0;
-  Mastered:boolean=true;
+  flashCatagory='';
   
-  questionMastered(flashcard:Flashcard):void{
+
+  questionMastered(flashcard:Card):void{
 this.flashcards = this.flashcards.filter(f => f.id!== flashcard.id)
 this.questionsmastered++;
 console.log(this.questionsmastered);
 //you have mastered "questionmastered" {{flashcard.topic.topicName}} questiong
   }
+
 
   
   

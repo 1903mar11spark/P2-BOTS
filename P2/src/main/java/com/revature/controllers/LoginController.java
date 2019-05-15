@@ -273,15 +273,18 @@ public class LoginController {
 	
 	
 	@GetMapping(value = "/sessionUser")
-	ResponseEntity<UserLogging> returnUserLogging(HttpSession session) {
+	public ResponseEntity<UserLogging> returnUserLogging(HttpServletRequest request, UserLogging ul) {
+		
+		//declarations
+		HttpSession session = request.getSession(false);
 		
 		System.out.println("in method");
 		
-		UserLogging userLogging = new UserLogging(Integer.parseInt(session.getAttribute("userId").toString()), session.getAttribute("username").toString(), session.getAttribute("firstname").toString(), session.getAttribute("lastname").toString(), session.getAttribute("email").toString(), session.getAttribute("usertype").toString()); 
+		ul = this.ul; 
 		
-		System.out.println(userLogging);
+		System.out.println(ul);
 	 
-		return new ResponseEntity<>(userLogging, HttpStatus.OK);
+		return new ResponseEntity<>(ul, HttpStatus.OK);
 	    
 	}
 	/*

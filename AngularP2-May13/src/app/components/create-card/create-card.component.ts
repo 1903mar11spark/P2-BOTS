@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { FlashcardService } from 'src/app/services/flashcard.service';
+import { Card } from 'src/app/models/card.model';
+import { Topic } from 'src/app/models/topic.model';
 
 @Component({
   selector: 'app-create-card',
@@ -9,17 +11,47 @@ import { FlashcardService } from 'src/app/services/flashcard.service';
 })
 export class CreateCardComponent implements OnInit {
 
-  newCardForm = new FormGroup({
+newCardForm: FormGroup;
+card: Card;
+
+
+constructor(private flashcardService:FlashcardService) { 
+  this.newCardForm = new FormGroup({
     question: new FormControl(),
     answer: new FormControl(),
-    topic: new FormControl()
+    topicName: new FormControl()
    }); 
+  }
 
-   onSubmit(): void {
-     this.flashcardService.addCard(this.newCardForm.value);
+  onSubmit(): void {
+    let num:number;
+    let topics = this.newCardForm.value.topicName;
+    if(topics = 'Mathematics') {
+      num = 2;
+    } else if(topics = 'Technology'){
+      num =1;
+    } else if(topics = 'Geography'){
+      num = 3;
+        console.log('geo here', num);
+    } else {
+      num = 0;
+    }
+    console.log(num);
+
+    let tp = new Topic(num, this.newCardForm.value.topicName);
+
+    let myCard = new Card(0, this.newCardForm.value.question, this.newCardForm.value.answer, tp);
+
+    console.log(myCard);
+
+    this.flashcardService.addCard(myCard).subscribe((creatingCard: any) => { this.card = creatingCard; console.log(this.card); },
+    error => { console.log(error); }
+   );
+   console.log(this.card)
+
    }
-
-  constructor(private flashcardService:FlashcardService) { }
+  
+  
 
   ngOnInit() {
   }

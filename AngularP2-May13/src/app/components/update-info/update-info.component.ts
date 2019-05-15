@@ -16,8 +16,10 @@ export class UpdateInfoComponent implements OnInit {
    }); 
 
    onSubmit(): void {
-     this.userService.updateUser(this.updateForm.value);
-     console.log('value here',this.updateForm.value)
+
+    //  this.userService.updateUser(this.updateForm.value);
+    //  console.log('value here',this.updateForm.value)
+
    }
 
   constructor(private userService: UserService) { }
