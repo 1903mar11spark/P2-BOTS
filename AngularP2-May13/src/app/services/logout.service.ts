@@ -18,8 +18,8 @@ export class LogoutService {
   //constructor 
   constructor(private httpClient: HttpClient) { }
 
-  public userLogout(): Observable<String> {
-    return this.httpClient.get<String>(`${this.endpoint}`); 
+  public userLogout(): Observable<UserLogging> {
+    return this.httpClient.get<UserLogging>(`${this.endpoint}`); 
   }
 
 
