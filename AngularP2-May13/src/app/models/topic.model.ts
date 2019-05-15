@@ -11,3 +11,4 @@ export class Topic {
         this.topicName = topicName;
     }
 
+}
