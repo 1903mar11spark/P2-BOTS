@@ -36,7 +36,7 @@ import { FlipCardComponent } from './components/flip-card/flip-card.component';
 import { PlayComponent } from './components/play/play.component';
 import { UpdateModalComponent } from './components/update-modal/update-modal.component';
 import { AdminStatsComponent } from './components/admin-stats/admin-stats.component';
-import { ChartComponent } from './components/chart/chart.component';
+
 import { AdminInfoComponent } from './components/admin-info/admin-info.component';
 import { AttemptComponent } from './components/attempt/attempt.component';
 import { SelectCardComponent } from './components/select-card/select-card.component';
@@ -70,8 +70,6 @@ import { SetStudyComponent } from './components/set-study/set-study.component';
     PlayComponent,
     UpdateModalComponent,
     AdminStatsComponent,
-
-    ChartComponent,
     AdminInfoComponent,
     AttemptComponent,
 

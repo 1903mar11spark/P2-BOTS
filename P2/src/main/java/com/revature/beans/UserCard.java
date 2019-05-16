@@ -1,5 +1,8 @@
 package com.revature.beans;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,17 +12,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-@NamedQueries({
-	
-	@NamedQuery(
-			name = "getUserCardbyUserId", 
-			query = "from Card join UserCard.user.id where user.id = :userIdVar")
-})
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity // indicates that the class represents a DB entity
 @Table(name ="USRCARD")

@@ -49,12 +49,12 @@ public class Driver {
 		
 		//testing connection
 		
-//		SessionFactory sf = ConnectionUtil.getSessionFactory();
-//		Session s = sf.openSession();
-//		Transaction tx = s.beginTransaction();
-//		System.out.println(s.getStatistics());
-//		tx.commit();
-//		s.close();
+		SessionFactory sf = ConnectionUtil.getSessionFactory();
+		Session s = sf.openSession();
+		Transaction tx = s.beginTransaction();
+		System.out.println(s.getStatistics());
+		tx.commit();
+		s.close();
 		
 		//testing persisting data 
 		
@@ -63,53 +63,20 @@ public class Driver {
 		/*
 		CardDAO cd = new CardDAOImpl(); 
 		*/
-		UserCardDAO ucd = new UserCardDAOImpl();
 		
 		
-		SessionFactory sf2 = ConnectionUtil.getSessionFactory();
-		Session s2 = sf2.openSession();
-
-		//query 1
-		Query q = s2.getNamedQuery("getUserCardbyUserId"); 
-		q.setParameter("userIdVar", 92); 
+		//userTypes 
 		
-		List<UserCard> userList = q.getResultList(); 
+		UserTypeDAO utd = new UserTypeDAOImpl(); 
 		
-		for (UserCard usercard : userList) {
-			System.out.println(usercard);
-		}
-		s2.close();
+		//user types 
+		/*
+		UserType ut1 = new UserType(1, "learner"); 
+		UserType ut2 = new UserType(2, "mentor");
 		
-//		//query 2
-//		Query q2 = s2.getNamedQuery("getLoginCredsIdbyUnameAndPword"); 
-//		q2.setParameter("uNameVar", "FFlower"); 
-//		q2.setParameter("pWordVar", "fanciful"); 
-//		
-//		List<Integer> loginCredsIdList = q2.getResultList(); 
-//		
-//		for (Integer id : loginCredsIdList) {
-//			System.out.println(id);
-//		}
-//		
-//		//userTypes 
-//		
-//		UserTypeDAO utd = new UserTypeDAOImpl(); 
-//		
-//		//user types 
-//	
-//		UserType ut1 = new UserType(1, "learner"); 
-//		UserType ut2 = new UserType(2, "mentor");
-//		
-//		utd.addUserType(ut1);
-//		utd.addUserType(ut2);
-		
-		
-		
-		
-		
-		
-		
-		
+		utd.addUserType(ut1);
+		utd.addUserType(ut2);
+		*/
 		
 		//login creds 
 		//set of creds for first user 
@@ -413,8 +380,8 @@ public class Driver {
 		
 		//testing named queries 
 		
-//		SessionFactory sf2 = ConnectionUtil.getSessionFactory();
-//		Session s2 = sf2.openSession();
+		SessionFactory sf2 = ConnectionUtil.getSessionFactory();
+		Session s2 = sf2.openSession();
 		/*
 		//query 1
 		Query q = s2.getNamedQuery("getUserbyLoginCredsId"); 
