@@ -82,6 +82,6 @@ export class UserInfoComponent implements OnInit {
     );
       console.log("test of user: ", this.user); 
 
-
+    }
 
 }
