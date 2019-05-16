@@ -3,7 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { FlashcardService } from 'src/app/services/flashcard.service';
 import { Card } from 'src/app/models/card.model';
 import { Topic } from 'src/app/models/topic.model';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-create-card',
   templateUrl: './create-card.component.html',
@@ -15,7 +15,7 @@ newCardForm: FormGroup;
 card: Card;
 
 
-constructor(private flashcardService:FlashcardService) { 
+constructor(private flashcardService:FlashcardService, private router: Router) { 
   this.newCardForm = new FormGroup({
     question: new FormControl(),
     answer: new FormControl(),
@@ -47,8 +47,8 @@ constructor(private flashcardService:FlashcardService) {
     this.flashcardService.addCard(myCard).subscribe((creatingCard: any) => { this.card = creatingCard; console.log(this.card); },
     error => { console.log(error); }
    );
-   console.log(this.card)
-
+  
+   this.router.navigate(['/adminHome']);
    }
   
   
