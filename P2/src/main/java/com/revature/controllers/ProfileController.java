@@ -25,7 +25,7 @@ import org.springframework.web.servlet.view.RedirectView;
 import com.revature.beans.User;
 
 
-@CrossOrigin(origins = "http://localhost:4205")
+@CrossOrigin(origins = "http://localhost:4207")
 @Controller
 public class ProfileController {
 	

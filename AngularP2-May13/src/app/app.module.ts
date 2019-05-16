@@ -15,7 +15,6 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; //BootStrap import 
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ChartsModule } from 'ng2-charts';
 
 //may add Material and Graphics 
 //as comments aren't permitted in json, to add Bootstrap you also have to go to the angular.json file and add
@@ -37,6 +36,8 @@ import { PlayComponent } from './components/play/play.component';
 import { UpdateModalComponent } from './components/update-modal/update-modal.component';
 import { AdminStatsComponent } from './components/admin-stats/admin-stats.component';
 import { ChartComponent } from './components/chart/chart.component';
+import { AdminInfoComponent } from './components/admin-info/admin-info.component';
+import { AttemptComponent } from './components/attempt/attempt.component';
 
 //services 
 
@@ -65,6 +66,8 @@ import { ChartComponent } from './components/chart/chart.component';
     UpdateModalComponent,
     AdminStatsComponent,
     ChartComponent,
+    AdminInfoComponent,
+    AttemptComponent,
     
   ],
   imports: [
@@ -73,7 +76,7 @@ import { ChartComponent } from './components/chart/chart.component';
     NgbModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ChartsModule
+    
     
   ],
   providers: [],

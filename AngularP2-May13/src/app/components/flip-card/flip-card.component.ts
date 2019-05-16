@@ -44,6 +44,7 @@ topic: Topic;
     }
      flashCatagory='';
      questionsmastered=0;
+     StoredId=0;
     Mastered:boolean=true;
     
     questionMastered(flashcard:Card):void{

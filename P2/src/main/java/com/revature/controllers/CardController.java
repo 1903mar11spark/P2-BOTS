@@ -24,7 +24,7 @@ import com.revature.service.CardService;
 import com.revature.service.TopicService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4205")
+@CrossOrigin(origins = "http://localhost:4207")
 @RequestMapping(value = "/card")
 public class CardController {
 

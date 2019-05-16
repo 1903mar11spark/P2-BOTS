@@ -1,0 +1,12 @@
+<div>
+  <div *ngFor="let attempt of this.attempts; let i=index">
+    attempt #{{i+1}} <br>
+    question: {{attempt.userCard.card.question}}
+    <br>Result:{{attempt.result.resultName}}
+
+  </div>
+  You have {{numCorrectAns}} correct <br>
+  you have done {{numAttempted}} attempts
+</div>
+
+

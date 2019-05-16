@@ -24,11 +24,12 @@
     <br>
 <h5>Hover over the flashcard to see the Answer!</h5>
     
+
 <br>
 
 
 <div *ngFor="let flashcard of this.flashcards">
-  <div *ngIf="(flashcard.topic.topicName== flashCatagory) && Mastered">
+  <div *ngIf="(flashcard.topic.topicName== flashCatagory)">
     <div>
 <div class="flip-card ">
   <div class="flip-card-inner">
@@ -37,7 +38,6 @@
            <h2> {{flashcard.question}} </h2>
 
           <!-- </div> -->
-        
     </div>
     <div class="flip-card-back">
         <!-- <div *ngFor="let flashcard of this.flashcards"> -->
