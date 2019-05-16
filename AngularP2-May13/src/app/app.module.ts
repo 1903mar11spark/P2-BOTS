@@ -1,3 +1,4 @@
+import { UserPullCardsComponent } from './components/user-pull-cards/user-pull-cards.component';
 import { BaseComponent } from './components/base/base.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -66,6 +67,7 @@ import { ChartComponent } from './components/chart/chart.component';
     UpdateModalComponent,
     AdminStatsComponent,
     ChartComponent,
+    UserPullCardsComponent,
     
   ],
   imports: [

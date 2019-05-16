@@ -6,6 +6,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PlayComponent } from './components/play/play.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
+import { UserPullCardsComponent } from './components/user-pull-cards/user-pull-cards.component';
+
 
 const routes: Routes = [
 
@@ -17,7 +19,9 @@ const routes: Routes = [
   { path: 'info', component: UserHomeComponent},
   { path: 'play', component: PlayComponent},
   { path: 'signUp', component: CreateUserComponent},
+  { path: 'userPullCards', component: UserPullCardsComponent}, 
   { path: '**', redirectTo: '/login' }
+
 ];
 
 @NgModule({
