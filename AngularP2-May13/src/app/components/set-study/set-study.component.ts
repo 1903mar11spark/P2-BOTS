@@ -19,10 +19,12 @@ export class SetStudyComponent implements OnInit {
   
   
     
-      constructor(private flashcardService:FlashcardService, @Inject(SESSION_STORAGE) private storage: StorageService) { }
+      // constructor(private flashcardService:FlashcardService, @Inject(SESSION_STORAGE) private storage: StorageService) { }
+
+      constructor(private flashcardService:FlashcardService) { }
     
       loadFlashCards(): void{
-        this.flashcardService.getSelectedFlashcards(this.id = Number(window.localStorage.getItem('id')))
+        this.flashcardService.getSelectedFlashcards(92)
         .subscribe(
         (flashcardList: any) => { this.flashcards = flashcardList;
 

@@ -21,7 +21,7 @@ import com.revature.beans.UserCard;
 import com.revature.service.UserCardService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4207")
+@CrossOrigin(origins = "http://localhost:4210")
 @RequestMapping(value = "/userCard")
 public class UserCardController {
 

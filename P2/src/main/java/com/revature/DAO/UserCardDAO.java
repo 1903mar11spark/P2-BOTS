@@ -15,5 +15,7 @@ public interface UserCardDAO {
 	public boolean updateUserCard(UserCard userCard); 
 	
 	public void deleteUserCard(UserCard userCard); 
+	
+	public List<UserCard> getAllCardsByUserId(int id);
 
 }
