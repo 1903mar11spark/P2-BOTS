@@ -10,8 +10,10 @@ import { Card } from '../models/card.model';
 export class FlashcardService {
 
   readonly URL = 'http://localhost:8096/P2/card';
+  
+ //need endpoint
+  readonly aURL = '';
 
- 
 
   constructor(private http: HttpClient) { }
 
@@ -26,5 +28,10 @@ export class FlashcardService {
   public addCard(card:Card): Observable<Card>{
     return this.http.post<Card>(this.URL, card)
   }
+
+  //NEED TO ADD OTHER ENDPOINT
+  public getSelectedFlashcards(id: number):Observable<Card[]>{
+    return  this.http.get<Card[]>(`${this.aURL}/${id}`);
+  } 
 
 }

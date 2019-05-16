@@ -2,34 +2,36 @@
 <h3>Select a topic</h3>
 
 <br>
-<div>
-<select (change)="filterFlashCards($event.target.value)">
-  <option value="">  </option>
-          <!-- <div *ngIf=" flashcard.topic.topicName == 'Geography'"> -->
+      <div>
+      <select (change)="filterFlashCards($event.target.value)">
+        <option value="">  </option>
+                <!-- <div *ngIf=" flashcard.topic.topicName == 'Geography'"> -->
 
-    <option *ngFor="let topic of this.topics" value="{{topic.topicName}}">
-      {{topic.topicName}}
+          <option *ngFor="let topic of this.topics" value="{{topic.topicName}}">
+            {{topic.topicName}}
 
-    </option>
-        <!-- </div> -->
+          </option>
+              <!-- </div> -->
 
-    <!-- <option value="volvo">Volvo</option>
-    <option value="saab">Saab</option>
-    <option value="opel">Opel</option>
-    <option value="audi">Audi</option> -->
-  </select>
-</div>
+          <!-- <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option> -->
+        </select>
+      </div>
 <br>
 <br>
     <br>
 <h5>Hover over the flashcard to see the Answer!</h5>
     
+
 <br>
 
 
 <div *ngFor="let flashcard of this.flashcards">
-  <div *ngIf="(flashcard.topic.topicName== flashCatagory) && Mastered">
+  <div *ngIf="(flashcard.topic.topicName== flashCatagory)">
     <div>
+
 <div class="flip-card ">
   <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -37,7 +39,6 @@
            <h2> {{flashcard.question}} </h2>
 
           <!-- </div> -->
-        
     </div>
     <div class="flip-card-back">
         <!-- <div *ngFor="let flashcard of this.flashcards"> -->
@@ -50,6 +51,7 @@
     
   </div>
 </div>
+
 <br> <br>
 </div>
 </div>

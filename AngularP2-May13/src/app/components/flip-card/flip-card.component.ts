@@ -22,13 +22,12 @@ topic: Topic;
       this.flashcardService.getFlashcards()
       .subscribe(
       (flashcardList: any) => { this.flashcards = flashcardList;
-         console.log(this.flashcards);
-  
+        for (let i = 0 ; i < this.flashcards.length; i ++){
+          console.log(this.flashcards[i].id);
+        }
         },
       error => { console.log(error); }
       )
-  
-    
   
     }
     loadTopics(): void{
@@ -44,6 +43,7 @@ topic: Topic;
     }
      flashCatagory='';
      questionsmastered=0;
+     StoredId=0;
     Mastered:boolean=true;
     
     questionMastered(flashcard:Card):void{

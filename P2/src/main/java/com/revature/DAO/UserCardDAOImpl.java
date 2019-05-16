@@ -3,6 +3,8 @@ package com.revature.DAO;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Query;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -76,5 +78,21 @@ public class UserCardDAOImpl implements UserCardDAO {
 			tx.commit();
 			s.close();
 		}
+	}
+
+	@Override
+	public List<UserCard> getAllCardsByUserId(int id) {
+		List<UserCard> userCards = new ArrayList<>();
+	
+		try (Session s = sf.getCurrentSession()) {
+			Transaction tx = s.beginTransaction();
+			
+			Query q1 = s.getNamedQuery("getUserCardbyUserId");
+			q1.setParameter("userIdVar", id);
+			userCards = q1.getResultList();
+			tx.commit();
+			s.close();
+		}
+		return userCards;
 	}
 }
