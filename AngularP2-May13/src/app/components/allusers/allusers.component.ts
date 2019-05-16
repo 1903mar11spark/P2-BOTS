@@ -26,6 +26,18 @@ export class AllusersComponent implements OnInit {
     console.log(this.users);
   
   }
+  /*
+  getUser(): void {
+    console.log("test")
+    this.userService.fetchUserInformation(92)
+    .subscribe(
+      (user: any) => { this.user = user; console.log(this.user); }, 
+      error => { console.log(`Error: ${error} `); }
+    ); 
+    console.log('populated user')
+    console.log("test of user: ", this.user); 
+  }
+*/
   ngOnInit() {
   }
 
