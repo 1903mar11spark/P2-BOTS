@@ -17,13 +17,12 @@ import { UserLogging } from 'src/app/models/user-logging.model';
 
 export class UserLoggingComponent implements OnInit {
 
-
   //instance variables 
   loginForm: FormGroup;
   login: Object = {}; //this does? 
   userLogging: UserLogging; 
   message: string; 
-
+  
  
   //constructor
   constructor(private loginService: LoginService, private LogoutService: LogoutService, private router: Router) {
@@ -56,24 +55,23 @@ export class UserLoggingComponent implements OnInit {
   console.log(this.userLogging);
   // this will usually print 'undefined' because it is attempting to print a
   // value which may not have back from the Observable yet.
+
+  //route to user home
+  this.router.navigate(['/userHome']);
   }
 
   // logging out 
+  /*
   userLogout() {
     this.LogoutService.userLogout().subscribe(
       (userLogging: UserLogging) => { this.userLogging = userLogging; console.log(this.userLogging); },
       error => { console.log(error); }
     );
-
   // console.log(`User ${this.userLogging.firstname} is now logged out`);
-
   // console.log(this.userLogging);
-
-
   this.router.navigate(['/base']);
-
   }
-
+  */
 
   ngOnInit() {
 

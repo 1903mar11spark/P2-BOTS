@@ -3,8 +3,8 @@ import { LoginCreds } from '../models/login-creds.model';
 
 export class User {
     id: number;
-    fName: string;
-    lName: string;
+    firstName: string;
+    lastName: string;
     email: string;
     userType: UserType; 
     loginCreds: LoginCreds; 
@@ -12,8 +12,8 @@ export class User {
 
     constructor(id: number, fName: string, lName: string, email: string, userType: UserType, loginCreds: LoginCreds, mentoredBy: number) {
         this.id = id;
-        this.fName = fName;
-        this.lName = lName;
+        this.firstName = fName;
+        this.lastName = lName;
         this.email = email;
         this.userType = userType;
         this.loginCreds = loginCreds; 
@@ -22,16 +22,4 @@ export class User {
     
 }
 
-
-export class createUser {
-    fName: string;
-    lName: string;
-    email: string;
-
-    constructor(fName: string, lName: string, email: string){
-        this.fName = fName;
-        this.lName = lName;
-        this.email = email;
-    }
-}
 

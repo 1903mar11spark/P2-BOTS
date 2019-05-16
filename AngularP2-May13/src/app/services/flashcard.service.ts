@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Flashcard } from '../models/Flashcard';
 import { Topic } from '../models/topic.model';
+import { Card } from '../models/card.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,16 +15,16 @@ export class FlashcardService {
 
   constructor(private http: HttpClient) { }
 
-  public getFlashcards():Observable<Flashcard[]>{
-    return  this.http.get<Flashcard[]>(this.URL+'/all');
+  public getFlashcards():Observable<Card[]>{
+    return  this.http.get<Card[]>(this.URL+'/all');
   }
 
   public getTopics():Observable<Topic[]>{
     return  this.http.get<Topic[]>(this.URL+'/topic/all');
   }
 
-  public addCard(flashcard: Flashcard): Observable<Flashcard>{
-    return this.http.post<Flashcard>(this.URL, flashcard)
+  public addCard(card:Card): Observable<Card>{
+    return this.http.post<Card>(this.URL, card)
   }
 
 }
