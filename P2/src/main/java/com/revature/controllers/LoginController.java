@@ -137,7 +137,9 @@ public class LoginController {
 			
 		}	
 		
-		UserLogging ulOut = new UserLogging(Integer.parseInt(session.getAttribute("userId").toString()), session.getAttribute("username").toString(), session.getAttribute("firstname").toString(), session.getAttribute("lastname").toString(), session.getAttribute("email").toString(), session.getAttribute("usertype").toString()); 
+		UserLogging ulOut = new UserLogging(Integer.parseInt(session.getAttribute("userId").toString()), session.getAttribute("username").toString(),
+				session.getAttribute("firstname").toString(), session.getAttribute("lastname").toString(),
+				session.getAttribute("email").toString(), session.getAttribute("usertype").toString()); 
 
 		//case of user loggin authenticated and admin status set for session
 		resp = new ResponseEntity<>(ulOut, HttpStatus.OK);
@@ -273,18 +275,15 @@ public class LoginController {
 	
 	
 	@GetMapping(value = "/sessionUser")
-	public ResponseEntity<UserLogging> returnUserLogging(HttpServletRequest request, UserLogging ul) {
-		
-		//declarations
-		HttpSession session = request.getSession(false);
+	ResponseEntity<UserLogging> returnUserLogging(HttpSession session) {
 		
 		System.out.println("in method");
 		
-		ul = this.ul; 
+		UserLogging userLogging = new UserLogging(Integer.parseInt(session.getAttribute("userId").toString()), session.getAttribute("username").toString(), session.getAttribute("firstname").toString(), session.getAttribute("lastname").toString(), session.getAttribute("email").toString(), session.getAttribute("usertype").toString()); 
 		
-		System.out.println(ul);
+		System.out.println(userLogging);
 	 
-		return new ResponseEntity<>(ul, HttpStatus.OK);
+		return new ResponseEntity<>(userLogging, HttpStatus.OK);
 	    
 	}
 	/*

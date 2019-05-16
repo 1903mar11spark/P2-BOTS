@@ -9,6 +9,7 @@ import { StatsComponent } from './components/stats/stats.component';
 import { UpdateInfoComponent } from './components/update-info/update-info.component';
 import { UserLoggingComponent } from './components/user-logging/user-logging.component';
 
+
 //MyModules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -38,6 +39,10 @@ import { AdminStatsComponent } from './components/admin-stats/admin-stats.compon
 import { ChartComponent } from './components/chart/chart.component';
 import { AdminInfoComponent } from './components/admin-info/admin-info.component';
 import { AttemptComponent } from './components/attempt/attempt.component';
+import { SelectCardComponent } from './components/select-card/select-card.component';
+import { SetStudyComponent } from './components/set-study/set-study.component';
+
+
 
 //services 
 
@@ -65,9 +70,15 @@ import { AttemptComponent } from './components/attempt/attempt.component';
     PlayComponent,
     UpdateModalComponent,
     AdminStatsComponent,
+
     ChartComponent,
     AdminInfoComponent,
     AttemptComponent,
+
+    SelectCardComponent,
+    SetStudyComponent,
+    
+
     
   ],
   imports: [
@@ -75,9 +86,9 @@ import { AttemptComponent } from './components/attempt/attempt.component';
     AppRoutingModule,
     NgbModule,
     ReactiveFormsModule,
-    HttpClientModule,
+    HttpClientModule
     
-    
+
   ],
   providers: [],
   //lets ang know root component

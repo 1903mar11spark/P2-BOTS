@@ -1,0 +1,22 @@
+<app-nav></app-nav>
+<br>
+<br>
+
+      <div class="container-flex">
+            <div class="row">
+              <div class="col text-center">
+                <h1>SELECT CARDS TO STUDY</h1>
+                <form [formGroup]="studySetForm" (ngSubmit)="onSubmit()">
+                    <div *ngFor="let card of this.card">
+                        <input type="checkbox" [value]="role.isChecked" [checked]="role.isChecked" (change)="$event.target.checked ? role.isChecked = true : role.isChecked = false"> Topic: {{ card.topic }}, Question: {{ card.question }}, Answer: {{ card.answer}}
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="CREATE SET" class="btn float-right login_btn bg-primary text-white">
+                    </div>
+                  </form>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+<app-footer></app-footer>
