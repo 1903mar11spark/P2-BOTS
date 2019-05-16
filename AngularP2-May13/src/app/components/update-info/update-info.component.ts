@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
-import { Router } from '@angular/router';
 import { User } from 'src/app/models/user.model';
 import { UserType } from 'src/app/models/user-type.model';
 import { LoginCreds } from 'src/app/models/login-creds.model';
@@ -39,11 +38,9 @@ export class UpdateInfoComponent implements OnInit {
     );
     console.log(this.user);
     //later iterations will have a modal that will pop out and say You have successfully signed up -- but for now it will be a simple redirect
-  this.router.navigate(['/adminHome']);
-    
-  
-
+     this.router.navigate(['/adminHome']);
    }
+   
 
   ngOnInit() {
   }
