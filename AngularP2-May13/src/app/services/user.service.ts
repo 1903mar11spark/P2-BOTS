@@ -29,14 +29,13 @@ export class UserService {
 
   public addUser(user: User): Observable<User>{
     console.log("created yay!")
-    return this.httpClient.post<any>(this.endpoint, user)
+    return this.httpClient.post<any>(this.endpoint, user);
   }
 
-  // public updateUser(cUser:createUser): Observable<createUser>{
-  //   console.log(cUser)
-  //   console.log('userService')
-  //   return this.httpClient.put<User>(this.endpoint, cUser)
-  // }
+ public updateUser(user:User): Observable<User>{
+      console.log('userService success')
+      return this.httpClient.put<User>(this.endpoint, user);
+   }
 
 }
 
