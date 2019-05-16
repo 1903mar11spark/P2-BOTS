@@ -14,18 +14,20 @@
 				<a routerLink="/info" class="nav-link">INFO</a>
 			</li>
 			<li class="nav-item">
-				<a routerLink="/play" class="nav-link">PLAY</a>
+				<a routerLink="/play" class="nav-link">ALL CARDS</a>
 			</li>
-			<li>
-				
-				<!-- <form>
-				input type="submit" value="Logout" class="btn text-light" name="logout">
-				</form> -->
+			<li>	
+			<li class="nav-item">
+				<a routerLink="/studySet" class="nav-link">CREATE CARD SET</a>
 			</li>
-		
+			<li class="nav-item">
+					<a routerLink="/setStudy" class="nav-link">STUDY CARD SET</a>
+				</li>
 		</ul>
-		<div class="form-group" id="logOutButton">
-				<button class="btn btn-success btn-center" (click)="userLogout()">LOGOUT</button>
-		</div>
+	</div>
+	<div>
+			<ul class="form-group nav-right"  id="logOutButton">
+					<button class="btn btn-success btn-center" (click)="userLogout()">LOGOUT</button>
+			</ul>
 	</div>
 </nav>
