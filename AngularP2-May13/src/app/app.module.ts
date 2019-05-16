@@ -1,3 +1,4 @@
+import { UserPullCardsComponent } from './components/user-pull-cards/user-pull-cards.component';
 import { BaseComponent } from './components/base/base.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -73,12 +74,17 @@ import { SetStudyComponent } from './components/set-study/set-study.component';
     PlayComponent,
     UpdateModalComponent,
     AdminStatsComponent,
+
+
+    UserPullCardsComponent,
+
     AdminInfoComponent,
     AttemptComponent,
 
     SelectCardComponent,
     SetStudyComponent,
     
+
 
     
   ],
