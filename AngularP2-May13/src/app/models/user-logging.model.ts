@@ -7,7 +7,9 @@ export class UserLogging {
     lastname: string;
     email: string;
     usertype: string; 
+
     id: number; 
+
 
     //constructor
     constructor(username: string, firstname: string, lastname: string, email: string, usertype: string, id: number) {
@@ -17,7 +19,7 @@ export class UserLogging {
         this.email = email;
         this.usertype = usertype;
         this.id = id; 
-        
+
     }
     
 }

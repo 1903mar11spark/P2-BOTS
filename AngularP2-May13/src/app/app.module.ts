@@ -9,11 +9,13 @@ import { StatsComponent } from './components/stats/stats.component';
 import { UpdateInfoComponent } from './components/update-info/update-info.component';
 import { UserLoggingComponent } from './components/user-logging/user-logging.component';
 
+
 //MyModules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; //BootStrap import 
 import { ReactiveFormsModule } from '@angular/forms';
+
 import { HttpClientModule } from '@angular/common/http'; 
 import { StorageServiceModule } from 'angular-webstorage-service'
 
@@ -37,7 +39,13 @@ import { FlipCardComponent } from './components/flip-card/flip-card.component';
 import { PlayComponent } from './components/play/play.component';
 import { UpdateModalComponent } from './components/update-modal/update-modal.component';
 import { AdminStatsComponent } from './components/admin-stats/admin-stats.component';
-import { ChartComponent } from './components/chart/chart.component';
+
+import { AdminInfoComponent } from './components/admin-info/admin-info.component';
+import { AttemptComponent } from './components/attempt/attempt.component';
+import { SelectCardComponent } from './components/select-card/select-card.component';
+import { SetStudyComponent } from './components/set-study/set-study.component';
+
+
 
 //services 
 
@@ -65,7 +73,13 @@ import { ChartComponent } from './components/chart/chart.component';
     PlayComponent,
     UpdateModalComponent,
     AdminStatsComponent,
-    ChartComponent,
+    AdminInfoComponent,
+    AttemptComponent,
+
+    SelectCardComponent,
+    SetStudyComponent,
+    
+
     
   ],
   imports: [
@@ -73,9 +87,12 @@ import { ChartComponent } from './components/chart/chart.component';
     AppRoutingModule,
     NgbModule,
     ReactiveFormsModule,
+
     HttpClientModule, 
     StorageServiceModule
+
     
+
   ],
   providers: [UserLoggingComponent],
   //lets ang know root component

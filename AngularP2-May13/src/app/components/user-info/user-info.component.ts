@@ -72,6 +72,7 @@ export class UserInfoComponent implements OnInit {
   }
 //consult hero detail component 
 
+
   getUser(): void {
     console.log("test")
     this.userService.fetchUserInformation(92)
@@ -80,7 +81,6 @@ export class UserInfoComponent implements OnInit {
       //error => console.log(`Error: ${error} `)
     );
       console.log("test of user: ", this.user); 
-  }
 
 
 
