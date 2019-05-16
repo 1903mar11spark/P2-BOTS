@@ -48,7 +48,7 @@ constructor(private flashcardService:FlashcardService, private router: Router) {
     error => { console.log(error); }
    );
   
-   this.router.navigate(['/adminHome']);
+   this.router.navigate(['/play']);
    }
   
   

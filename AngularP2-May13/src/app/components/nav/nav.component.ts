@@ -24,6 +24,7 @@ export class NavComponent implements OnInit {
     this.LogoutService.userLogout().subscribe(
       (userLogging: UserLogging) => { this.userLogging = userLogging; console.log(this.userLogging); },
       error => { console.log(error); }
+      
     );
 
   this.router.navigate(['/base']);
