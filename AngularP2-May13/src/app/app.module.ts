@@ -87,7 +87,6 @@ import { SetStudyComponent } from './components/set-study/set-study.component';
     AppRoutingModule,
     NgbModule,
     ReactiveFormsModule,
-
     HttpClientModule, 
     StorageServiceModule
 
