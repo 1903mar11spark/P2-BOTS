@@ -1,11 +1,13 @@
 import { Router } from '@angular/router';
-import { BaseComponent } from './../base/base.component';
 import { LogoutService } from './../../services/logout.service';
 import { Credentials } from './../../models/credentials.model';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 import { UserLogging } from 'src/app/models/user-logging.model';
+import { DriverService } from 'src/app/services/driver.service';
+import { deepStrictEqual } from 'assert';
+import { UserInfoComponent } from '../user-info/user-info.component';
 
 
 @Component({
@@ -47,7 +49,15 @@ export class UserLoggingComponent implements OnInit {
     //this.http.post("http://localhost:8096/P2/login", body).subscribe((data) => {});
 
     this.loginService.userLogin(credentials).subscribe(
-      (userLoggingIn: any) => { this.userLogging = userLoggingIn; console.log(this.userLogging); },
+      (userLoggingIn: any) => { this.userLogging = userLoggingIn; 
+        console.log('check type',this.userLogging.usertype)
+        if(this.userLogging.usertype == "standard"){
+          this.router.navigate(['/userHome']);
+          console.log(this.userLogging.id);
+        } else {
+          this.router.navigate(['/adminHome']);
+        }
+        console.log('info is here', this.userLogging); },
       error => { console.log(error); }
     );
   console.log('populated userLogging');
@@ -56,10 +66,11 @@ export class UserLoggingComponent implements OnInit {
   // this will usually print 'undefined' because it is attempting to print a
   // value which may not have back from the Observable yet.
 
-  //route to user home
-  this.router.navigate(['/userHome']);
+  //route to user home 
+  // this.router.navigate(['/userHome']);
   }
 
+  
   // logging out 
   /*
   userLogout() {

@@ -4,7 +4,7 @@ import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user.model';
 import { UserType } from 'src/app/models/user-type.model';
 import { LoginCreds } from 'src/app/models/login-creds.model';
-
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -19,7 +19,7 @@ export class CreateUserComponent implements OnInit {
   user: User; 
   uType: UserType;
  
-  constructor(private userService: UserService) { 
+  constructor(private userService: UserService, private router: Router ) { 
     this.createForm = new FormGroup({
       firstName: new FormControl(),
       lastName: new FormControl(),
@@ -43,11 +43,10 @@ export class CreateUserComponent implements OnInit {
      error => { console.log(error); }
     );
     console.log(this.user);
-    
-  
+    //later iterations will have a modal that will pop out and say You have successfully signed up -- but for now it will be a simple redirect
+  this.router.navigate(['/login']);
 } 
   
-
   ngOnInit() {
   }
   

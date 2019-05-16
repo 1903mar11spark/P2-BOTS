@@ -23,15 +23,10 @@ export class UserInfoComponent implements OnInit {
 //consult hero detail component 
 
   getUserInfo(): void {
-    this.userService.fetchUserInformation(68) //hard coded to check --> need to grab from session
+    console.log();
+    this.userService.fetchUserInformation(9)
       .subscribe(
         user => this.user = user);
-    //     (userId: any) => { this.user = userId; console.log(this.user); },
-    //     error => { console.log(error + 'testing'); }
-    //   );
-    // console.log('singular user');
-    // console.log(this.user);
-  
   }
 
   
