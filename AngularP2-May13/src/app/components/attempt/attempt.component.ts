@@ -10,7 +10,7 @@ export class AttemptComponent implements OnInit {
 attempts: Attempt[];
 attempt: Attempt;
 
-  x=this.attempts.length;
+
 
   constructor(private attemptService:AttemptService) { }
 
@@ -29,16 +29,9 @@ attempt: Attempt;
       },
       error =>{console.log(error);}
     )
-    this.numCorrect();
+  
   }
 
-  numCorrect():void{
-    for(let i=0; i<2;i++){
-      if(true){
-        this.numCorrectAns++;
-      }
-    }
-  }
 
   ngOnInit() {
     this.loadAttempts();

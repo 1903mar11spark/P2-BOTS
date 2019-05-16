@@ -5,8 +5,9 @@
       <div class="container-flex">
             <div class="row">
               <div class="col text-center">
-                <h1>SELECT CARDS TO STUDY</h1>
-
+                <h1>All Available Cards</h1>
+                <hr>
+                <hr>
                 <form [formGroup]="studySetForm" (ngSubmit)="onSubmit()">
                 <div *ngFor="let flashcard of this.flashcards">
                     <!-- <div *ngIf="(flashcard.topic.topicName== flashCatagory)"> -->
@@ -49,5 +50,5 @@
 
 
 
-          
+
 <app-footer></app-footer>

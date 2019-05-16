@@ -5,9 +5,6 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 import { UserLogging } from 'src/app/models/user-logging.model';
-import { DriverService } from 'src/app/services/driver.service';
-import { deepStrictEqual } from 'assert';
-import { UserInfoComponent } from '../user-info/user-info.component';
 import { LocalStorage } from '@ngx-pwa/local-storage';
 
 @Component({
