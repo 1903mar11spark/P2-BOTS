@@ -8,7 +8,7 @@ import { UserLogging } from 'src/app/models/user-logging.model';
 import { DriverService } from 'src/app/services/driver.service';
 import { deepStrictEqual } from 'assert';
 import { UserInfoComponent } from '../user-info/user-info.component';
-
+import { LocalStorage } from '@ngx-pwa/local-storage';
 
 @Component({
   selector: 'app-user-loggin',
@@ -24,10 +24,10 @@ export class UserLoggingComponent implements OnInit {
   login: Object = {}; //this does? 
   userLogging: UserLogging; 
   message: string; 
-  
+  log: any;
  
   //constructor
-  constructor(private loginService: LoginService, private LogoutService: LogoutService, private router: Router) {
+  constructor(protected localStorage: LocalStorage, private loginService: LoginService, private LogoutService: LogoutService, private router: Router) {
     this.loginForm = new FormGroup({
       username: new FormControl(),
       password: new FormControl()
@@ -54,6 +54,7 @@ export class UserLoggingComponent implements OnInit {
         if(this.userLogging.usertype == "standard"){
           this.router.navigate(['/userHome']);
           console.log(this.userLogging.id);
+
         } else {
           this.router.navigate(['/adminHome']);
         }

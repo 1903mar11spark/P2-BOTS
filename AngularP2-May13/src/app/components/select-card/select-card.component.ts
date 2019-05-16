@@ -3,6 +3,9 @@ import { UserType } from 'src/app/models/user-type.model';
 import { LoginCreds } from 'src/app/models/login-creds.model';
 import { User } from 'src/app/models/user.model';
 import { Topic } from 'src/app/models/topic.model';
+import { FlashcardService } from 'src/app/services/flashcard.service';
+import { FormGroup } from '@angular/forms';
+import { UserCard } from 'src/app/models/user-card.model';
 
 @Component({
   selector: 'app-select-card',
@@ -11,7 +14,14 @@ import { Topic } from 'src/app/models/topic.model';
 })
 export class SelectCardComponent implements OnInit {
 
-  constructor() { }
+  studySetForm: FormGroup;
+  userCard: UserCard;
+
+  constructor(private fS: FlashcardService) {
+    this.studySetForm = new FormGroup({
+      
+    })
+   }
 
   onCardSelect(): void {
 
@@ -38,36 +48,6 @@ export class SelectCardComponent implements OnInit {
 
 
 
-// "id": 4,
-// "userCard": {
-//     "id": 3,
-//     "user": {
-//         "id": 69,
-//         "firstName": "John",
-//         "lastName": "Jones",
-//         "email": "JJones@futuretech.com",
-//         "userType": {
-//             "id": 1,
-//             "userTypeName": "learner"
-//         },
-//         "loginCreds": {
-//             "id": 2,
-//             "uName": "JJones",
-//             "pWord": "juniper"
-//         },
-//         "mentoredBy": 0
-//     },
-//     "card": {
-//         "id": 14,
-//         "question": "What is the capital district of Mexico?",
-//         "answer": "The Federal District",
-//         "topic": {
-//             "id": 3,
-//             "topicName": "Geography"
-//         }
-//     },
-//     "cardState": {
-//         "id": 2,
-//         "name": "mastered"
-//     }
-// },
+// $("input:checkbox[name=type]:checked").each(function(){
+//   yourArray.push($(this).val());
+// });

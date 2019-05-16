@@ -38,6 +38,7 @@ import { PlayComponent } from './components/play/play.component';
 import { UpdateModalComponent } from './components/update-modal/update-modal.component';
 import { AdminStatsComponent } from './components/admin-stats/admin-stats.component';
 import { SelectCardComponent } from './components/select-card/select-card.component';
+import { SetStudyComponent } from './components/set-study/set-study.component';
 
 
 //services 
@@ -67,6 +68,7 @@ import { SelectCardComponent } from './components/select-card/select-card.compon
     UpdateModalComponent,
     AdminStatsComponent,
     SelectCardComponent,
+    SetStudyComponent,
     
     
   ],

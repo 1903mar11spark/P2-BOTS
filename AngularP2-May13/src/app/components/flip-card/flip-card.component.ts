@@ -29,8 +29,6 @@ topic: Topic;
       error => { console.log(error); }
       )
   
-    
-  
     }
     loadTopics(): void{
       this.flashcardService.getTopics()

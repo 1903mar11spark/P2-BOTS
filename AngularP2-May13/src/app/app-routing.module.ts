@@ -8,6 +8,7 @@ import { PlayComponent } from './components/play/play.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
 import { SelectCardComponent } from './components/select-card/select-card.component';
 import { InfoComponent } from './components/info/info.component';
+import { SetStudyComponent } from './components/set-study/set-study.component';
 
 const routes: Routes = [
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'play', component: PlayComponent},
   { path: 'signUp', component: CreateUserComponent},
   { path: 'studySet', component: SelectCardComponent },
+  { path: 'setStudy', component: SetStudyComponent },
   { path: '**', redirectTo: '/login' }
 ];
 
