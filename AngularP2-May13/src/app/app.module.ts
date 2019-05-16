@@ -14,8 +14,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; //BootStrap import 
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { ChartsModule } from 'ng2-charts';
+import { HttpClientModule } from '@angular/common/http'; 
+import { StorageServiceModule } from 'angular-webstorage-service'
+
 
 //may add Material and Graphics 
 //as comments aren't permitted in json, to add Bootstrap you also have to go to the angular.json file and add
@@ -55,7 +56,7 @@ import { ChartComponent } from './components/chart/chart.component';
     AllusersComponent,
     StatsComponent,
     UpdateInfoComponent,
-    UserLoggingComponent,
+    UserLoggingComponent, 
     BaseComponent,
     CardModalComponent,
     CreateUserComponent,
@@ -72,12 +73,16 @@ import { ChartComponent } from './components/chart/chart.component';
     AppRoutingModule,
     NgbModule,
     ReactiveFormsModule,
-    HttpClientModule,
-    ChartsModule
+    HttpClientModule, 
+    StorageServiceModule
     
   ],
-  providers: [],
+  providers: [UserLoggingComponent],
   //lets ang know root component
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }
+
+
