@@ -21,7 +21,7 @@ import com.revature.beans.Attempt;
 import com.revature.service.AttemptService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4210")
+@CrossOrigin(origins = "http://localhost:4205")
 @RequestMapping(value = "/attempt")
 public class AttemptController {
 

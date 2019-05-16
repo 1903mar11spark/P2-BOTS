@@ -30,7 +30,7 @@ import com.revature.service.AuthService;
 import com.revature.service.UserService;
 
 @Controller
-@CrossOrigin(origins = "http://localhost:4210")
+@CrossOrigin(origins = "http://localhost:4205")
 //@CrossOrigin(origins = "http://localhost:4203")
 public class LoginController {
 
